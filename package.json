@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/EvSedov/server-crud-db/issues"
   },
-  "homepage": "https://github.com/EvSedov/server-crud-db#readme"
+  "homepage": "https://github.com/EvSedov/server-crud-db#readme",
+  "dependencies": {
+    "sqlite3": "^5.1.7"
+  }
 }
