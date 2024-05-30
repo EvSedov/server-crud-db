@@ -1,16 +1,15 @@
 const url = require('url');
+const usersRoutes = require('./usersRoutes/usersRoutes');
 
 const routeHandler = (req, res) => {
   const parseUrl = url.parse(req.url, true);
   const path = parseUrl.pathname;
 
   if (path == '/users' || path.startsWith('/users/')) {
-    res.setHeader('Content-type', 'application/json');
-    res.writeHead(200);
-    res.end(JSON.stringify({ message: 'All good!!!' }));
+    usersRoutes(req, res);
   } else {
     res.setHeader('Content-type', 'application/json');
-    res.writeHead(400);
+    res.writeHead(404);
     res.end(JSON.stringify({ message: 'Route not found' }));
   }
 };
